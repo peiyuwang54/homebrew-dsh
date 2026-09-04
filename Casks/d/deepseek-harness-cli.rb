@@ -1,5 +1,5 @@
 cask "deepseek-harness-cli" do
-  version "0.1.0-rc.12"
+  version "0.1.0-rc.13"
 
   arch arm: "arm64", intel: "x64"
   os macos: "macos", linux: "linux"
@@ -11,25 +11,27 @@ cask "deepseek-harness-cli" do
 
   on_macos do
     on_arm do
-      sha256 "4dd1e98569b4e7165bf8727cb169093b2c9de6573c04012142f3ddbd3698f62d"
+      sha256 "1d20ebcc5687a0300e55b1bada859105461a376468fbb0b660d8bf81a513b328"
     end
     on_intel do
-      sha256 "af62ad02ecb52175bd98fec871bfa6b6ac273bc22dec55c9876b3bf1f2746e96"
+      sha256 "ac0f349d2eb448165bdff5378f4c7798540269d8d029c26389ce3643a52b64b4"
     end
+    binary "bin/deepseek-harness-cli-spawn-helper"
   end
 
   on_linux do
     on_arm do
-      sha256 "34a78a4160fbf6a21c3d941eae2bb9c65324e1cb0823035cc6f028e3e5a1ebd9"
+      sha256 "b1b8572e869e26e63d30dae757eee2f6445ef44c29a4b336e9b7773e9d7c119f"
     end
     on_intel do
-      sha256 "ae0d803b1ad59a71338924d66f45e576e2217f4d69ddf8660015f5436a1a94cb"
+      sha256 "9277af5f5e94cec16a1a8dabb5f10ebdbba393d2d025f6d9c3f08deef32f9599"
     end
   end
 
   binary "bin/deepseek-harness-cli", target: "deepseek"
   binary "bin/deepseek-harness-cli", target: "dsh"
   binary "bin/deepseek-harness-cli"
+  binary "bin/deepseek-harness-cli-rg"
 
   livecheck do
     url :url
